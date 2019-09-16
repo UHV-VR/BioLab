@@ -30,8 +30,8 @@ public class Hand : MonoBehaviour
     {
         m_Pose = GetComponent<SteamVR_Behaviour_Pose>();
         m_joint = GetComponent<FixedJoint>();
-        towers = GameObject.FindGameObjectsWithTag("bases");
-        pieces = GameObject.FindGameObjectsWithTag("interactable");
+       // towers = GameObject.FindGameObjectsWithTag("bases");
+       // pieces = GameObject.FindGameObjectsWithTag("interactable");
     }
     // Update is called once per frame
     void Update()
