@@ -635,10 +635,6 @@
       <Project>{726C464F-4195-5FBD-C038-F94D37537265}</Project>
       <Name>SteamVR_Windows_EditorHelper</Name>
     </ProjectReference>
-    <ProjectReference Include="SteamVR_Actions.csproj">
-      <Project>{5A41C24C-381F-41E1-3FE5-C9EEC0E33AEE}</Project>
-      <Name>SteamVR_Actions</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
