@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.projectversion1.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Virtual Reality\\github_VR\\Bio Lab\\BioLab\\actions.json",
+      "action_manifest_path": "F:\\BioLab-master\\actions.json",
       "strings": {
         "en_us": {
           "name": "ProjectVersion1 [Testing]"
