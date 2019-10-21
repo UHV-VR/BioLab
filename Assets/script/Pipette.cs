@@ -30,17 +30,7 @@ public class Pipette : World
         {
             if(!iteration)
             {
-                // Debug.Log(" successfully went in ");
-                /*if (gameObject.transform.childCount > 5)
-                {
-                    Debug.Log("inside of the first outer if");
-                    if (parent.transform.Find("liquid"))
-                    {
-                        Debug.Log("am inside the if that calls to release liquid");
-                        trasnferLiquidout();
-                    }
                
-                }*/
                 if (inReachTube)
                 {
                     if (!current.transform.Find("liquid"))
@@ -92,8 +82,8 @@ public class Pipette : World
         liquid = previousHolder.transform.Find("liquid");
         liquid.transform.SetParent(parent.transform);
         Debug.Log("got into transferliquid");
-        parent.transform.gameObject.GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
-        previousHolder.transform.gameObject.GetComponent<Renderer>().material.SetColor("_Color", Color.grey);
+        parent.transform.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
+        previousHolder.transform.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", Color.grey);
     }
     
  

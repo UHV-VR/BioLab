@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Liquid : World
 {
+    [SerializeField]
     private bool phage1 = false;
+    [SerializeField]
     private bool phage2 = false;
+    [SerializeField]
     private bool shaken = false;
+    [SerializeField]
     private bool incubated = false;
+    [SerializeField]
     private bool centrafuge = false; 
     // Start is called before the first frame update
     void Start()

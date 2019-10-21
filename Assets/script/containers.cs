@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class containers : MonoBehaviour
+public class containers : World
 {
     //Purpose: will move an object released inside range if it is a test tube
     // Start is called before the first frame update
@@ -19,37 +19,67 @@ public class containers : MonoBehaviour
     {
         //will assign the gameobject here when the button is pressed within the range of the object 
         //will call assigntoSlot 
+
+        if ((!rright.GetComponent<Hand>().triggerDown && !rleft.GetComponent<Hand>().triggerDown))
+        {
+            // Debug.Log("able to get inside of if for the remotes ");
+            //sees if the remote is in range 
+            if (inrange)
+            {
+                assigntoSlot(toassign);
+                toassign = null;
+                inrange = false;
+            }
+        }
     }
     //sees if the collider is something that can be assigned to a container 
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.transform.tag == "testTube")
+        if (other.GetComponent<LiquidContainer>())
         {
-            inrange = true;
-            toassign = other.gameObject;
+            if (other.GetComponent<LiquidContainer>().getTag() == "testTube")
+            {
+                //Debug.Log("testtube in range ");
+                inrange = true;
+                toassign = other.gameObject;
+            }
         }
+        
     }
     //sees if the collider that is leaving could have been assigned to the container 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.tag == "testTube")
+        if (other.GetComponent<LiquidContainer>())
         {
-            inrange = false;
-            toassign = null;
+            if (other.GetComponent<LiquidContainer>().getTag() == "testTube")
+            {
+                //Debug.Log("testtube leaving range");
+                inrange = false;
+                toassign = null;
+                other.transform.parent = null;
+                other.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            }
         }
     }
     //assigns the object to one of the empty objects that are placed on each of the empty spaces 
     public void assigntoSlot(GameObject assignment)
     {
+      
         if (assignment == null)
         {
             return;
         }
+        if (spots == 3)
+            return;
         Transform child = gameObject.transform.GetChild(spots);
         assignment.transform.position = child.transform.position;
         assignment.transform.parent = child.transform;
+        assignment.GetComponent<LiquidContainer>().setTag("test");
+        // shouldnt freeze...what then?
+        assignment.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         spots++;
+
         return;
            
     }

@@ -41,6 +41,14 @@
       "requirement": "optional"
     },
     {
+      "name": "/actions/default/in/TouchpadTouch",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/default/in/joystickPressDown",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },

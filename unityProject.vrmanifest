@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.biolab.exe",
+      "app_key": "application.generated.unity.projectversion1.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "F:\\Bio Lab\\actions.json",
+      "action_manifest_path": "F:\\BioLab-master\\actions.json",
       "strings": {
         "en_us": {
-          "name": "Bio Lab [Testing]"
+          "name": "ProjectVersion1 [Testing]"
         }
       }
     }
