@@ -7,7 +7,7 @@ public class PDPipette : Pipette
     private bool tipRange;
     private bool tip = false;
 
-   
+
 
     //double check the assignment of tip
     //IF NEEDED, can remove the joint from the object 
@@ -15,7 +15,7 @@ public class PDPipette : Pipette
     // Start is called before the first frame update
     private void Awake()
     {
-      
+
     }
 
     // Update is called once per frame
@@ -41,13 +41,13 @@ public class PDPipette : Pipette
     }
     public void setTipRange(bool value)
     {
-        tipRange = value; 
+        tipRange = value;
     }
     public bool getTipRange()
     {
         return tipRange;
     }
-   
+
     private void assignTip(Collider other)
     {
         Quaternion rotation = other.gameObject.transform.GetChild(4).gameObject.transform.rotation;
@@ -79,7 +79,7 @@ public class PDPipette : Pipette
         //dont know if this actually works 
         this.gameObject.transform.GetChild(5).gameObject.transform.parent = null;
         tip = false;
-       
+
     }
 
 }

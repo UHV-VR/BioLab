@@ -10,16 +10,19 @@ public class World : MonoBehaviour
     public Sounds[] sounds;
 
     //[SerializeField]
-    public GameObject rright = GameObject.Find("Controller (right)");
+    public GameObject rright;
 
     // [SerializeField]
-    public GameObject rleft = GameObject.Find("Controller (left)");
+    public GameObject rleft;
     //sound sounds;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rright = GameObject.Find("Controller (right)");
+
+        // [SerializeField]
+        rleft = GameObject.Find("Controller (left)");
     }
     void Awake()
     {
@@ -48,16 +51,15 @@ public class World : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void setInfo(string value)
     {
-        info = value; 
+        info = value;
     }
     public string getInfo()
     {
         return info;
     }
-
 }

@@ -9,7 +9,7 @@ public class Vortex : World
 
     void Update()
     {
-       
+
     }
 
 
@@ -25,7 +25,7 @@ public class Vortex : World
             {
                 Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
             }
-            other.transform.Find("liquid").GetComponent<Liquid>().setshaken(true);
+            other.transform.Find("liquid").GetComponent<Liquid>().shaken = true;
         }
     }
 

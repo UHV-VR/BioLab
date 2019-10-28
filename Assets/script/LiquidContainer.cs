@@ -8,21 +8,15 @@ public class LiquidContainer : World
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
-        if ((!rright.GetComponent<Hand>().triggerDown && !rleft.GetComponent<Hand>().triggerDown))
-        {
-            if (rright.GetComponent<Hand>().held == this.name || rleft.GetComponent<Hand>().held == this.name)
-            {
-                this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.none;
-            }
-        }
+
     }
- 
+
     public void setTag(string value)
     {
         Tag = value;

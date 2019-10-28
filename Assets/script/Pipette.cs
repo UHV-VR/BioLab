@@ -16,7 +16,7 @@ public class Pipette : World
     void Start()
     {
         current = gameObject;
-}
+    }
     private void Awake()
     {
 
@@ -28,9 +28,9 @@ public class Pipette : World
 
         if ((rright.GetComponent<Hand>().padDown || rleft.GetComponent<Hand>().padDown) && (rright.GetComponent<Hand>().held == gameObject.name || rleft.GetComponent<Hand>().held == gameObject.name))
         {
-            if(!iteration)
+            if (!iteration)
             {
-               
+
                 if (inReachTube)
                 {
                     if (!current.transform.Find("liquid"))
@@ -43,11 +43,11 @@ public class Pipette : World
                         Debug.Log("am inside the if that calls to release liquid");
                         setLiquid(inreach, gameObject);
                     }
-                   //could add an else here to remove the liquid but need a different update
+                    //could add an else here to remove the liquid but need a different update
                 }
                 iteration = true;
             }
-           
+
         }
         else
             iteration = false;
@@ -56,7 +56,7 @@ public class Pipette : World
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.GetComponent<LiquidContainer>())
-        { 
+        {
             if (other.gameObject.GetComponent<LiquidContainer>().getTag() == "testTube")
             {
                 inReachTube = true;
@@ -76,7 +76,7 @@ public class Pipette : World
         }
     }
 
-//assigns the liquid to this object as a child
+    //assigns the liquid to this object as a child
     public void setLiquid(GameObject parent, GameObject previousHolder)
     {
         liquid = previousHolder.transform.Find("liquid");
@@ -85,8 +85,8 @@ public class Pipette : World
         parent.transform.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
         previousHolder.transform.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", Color.grey);
     }
-    
- 
+
+
     public string getContent()
     {
         return content;
@@ -95,5 +95,5 @@ public class Pipette : World
     {
         content = value;
     }
-    
+
 }

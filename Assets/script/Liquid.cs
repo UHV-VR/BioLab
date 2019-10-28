@@ -4,26 +4,48 @@ using UnityEngine;
 
 public class Liquid : World
 {
+
+    //private bool phage1 = false;
+
+    // private bool bacteria = false;
     [SerializeField]
-    private bool phage1 = false;
+    public bool bacteria { get; set; }
     [SerializeField]
-    private bool phage2 = false;
+    public bool phage1 { get; set; }
     [SerializeField]
-    private bool shaken = false;
+    public bool phage2 { get; set; }
     [SerializeField]
-    private bool incubated = false;
+    public bool shaken { get; set; }
     [SerializeField]
-    private bool centrafuge = false; 
+    public bool incubated { get; set; }
+    [SerializeField]
+    public bool centrafuge { get; set; }
+
+
+
+
+
+    //private bool phage2 = false;
+
+    //private bool shaken = false;
+
+    // private bool incubated = false;
+
+    //private bool centrafuge = false; 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    /*public void setBacteria(bool value)
+    {
+        bacteria = value;
     }
     public void setphage1( bool value)
     {
@@ -50,6 +72,10 @@ public class Liquid : World
         centrafuge = value;
     }
 
+    /*public bool getBacteria()
+    {
+        return bacteria;
+    }
     public bool getphage1()
     {
         return phage1;
@@ -73,5 +99,5 @@ public class Liquid : World
     public bool getcentrafuge()
     {
         return centrafuge;
-    }
+    }*/
 }
