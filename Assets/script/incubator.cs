@@ -39,7 +39,7 @@ public class incubator : Containers
                 //double check and see if this works, this is an adition LOOK HERE*******************
                 if (child.transform.GetChild(0).gameObject.transform.GetChild(2).GetComponent<Liquid>())
                 {
-                    child.transform.GetChild(0).gameObject.transform.GetChild(2).GetComponent<Liquid>().incubated = true;
+                    child.transform.GetChild(0).gameObject.transform.GetChild(2).GetComponent<Liquid>().setincubated(true);
                 }
 
             }

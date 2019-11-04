@@ -140,7 +140,7 @@ public class Hand : MonoBehaviour
 
 
         // TRYING TO RESET THE ROTATION OF THE OBJECT BEFORE IT IS SET dOWN ON A TOWER 
-        targetbody.transform.localEulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
+       // targetbody.transform.localEulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
 
     
         if (each == 3)

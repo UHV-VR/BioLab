@@ -15,6 +15,7 @@ public class Vortex : World
 
     private void OnTriggerStay(Collider other)
     {
+
         if (other.gameObject.GetComponent<LiquidContainer>().getTag() == "testTube")
         {
             if (rright.GetComponent<Hand>().name == other.name)
@@ -25,7 +26,7 @@ public class Vortex : World
             {
                 Pulse(1, 150, 75, SteamVR_Input_Sources.LeftHand);
             }
-            other.transform.Find("liquid").GetComponent<Liquid>().shaken = true;
+            other.transform.Find("liquid").GetComponent<Liquid>().setshaken(true);
         }
     }
 

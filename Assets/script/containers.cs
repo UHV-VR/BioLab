@@ -11,6 +11,7 @@ public class Containers : World
     private int spots = 0;
     [SerializeField]
     private GameObject[] childeren = new GameObject[3];
+    private int all = 0;
     void Start()
     {
 
@@ -19,6 +20,7 @@ public class Containers : World
     // Update is called once per frame
     void Update()
     {
+        all = 0;
         //will assign the gameobject here when the button is pressed within the range of the object 
         //will call assigntoSlot 
 
@@ -28,9 +30,22 @@ public class Containers : World
             //sees if the remote is in range 
             if (inrange)
             {
-                assigntoSlot(toassign);
-                toassign = null;
-                inrange = false;
+                for (int i = 0; i < childeren.Length; i++)
+                {
+                    if (toassign == childeren[i])
+                        return;
+                    else
+                    {
+                        all++;
+                    }
+                }
+                if (all == 3)
+                {
+                        assigntoSlot(toassign);
+                        toassign = null;
+                        inrange = false;
+                }
+               
             }
         }
     }
@@ -119,6 +134,8 @@ public class Containers : World
             child = this.transform.GetChild(i);
             //grabs a child with the same element value
             //sees if that child has a child 
+            print(child.name);
+            print(child.childCount);
             if (child.GetChild(0) != null)
             {
                 //*********** NOT TOO SURE IF THIS WILL WORK, MUST TRY!!
@@ -127,9 +144,11 @@ public class Containers : World
                 {
                     //removes that object from the array 
                     childeren[i] = null;
+                    spots--;
+                    return;
                 }
             }
         }
-        spots--;
+        
     }
 }

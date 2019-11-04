@@ -356,7 +356,6 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
     <Compile Include="Assets\Pointer.cs" />
     <Compile Include="Assets\script\Beaker.cs" />
-    <Compile Include="Assets\script\Centrafuge.cs" />
     <Compile Include="Assets\script\container.cs" />
     <Compile Include="Assets\script\Containers.cs" />
     <Compile Include="Assets\script\incubator.cs" />
@@ -366,7 +365,9 @@
     <Compile Include="Assets\script\LiquidContainer.cs" />
     <Compile Include="Assets\script\PDPipette.cs" />
     <Compile Include="Assets\script\Pipette.cs" />
-    <Compile Include="Assets\script\Raidioactive.cs" />
+    <Compile Include="Assets\script\results\Centrafuge.cs" />
+    <Compile Include="Assets\script\results\Raidioactive.cs" />
+    <Compile Include="Assets\script\results\Slot.cs" />
     <Compile Include="Assets\script\Sounds.cs" />
     <Compile Include="Assets\script\Vortex.cs" />
     <Compile Include="Assets\script\World.cs" />

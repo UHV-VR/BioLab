@@ -8,30 +8,32 @@ public class Liquid : World
     //private bool phage1 = false;
 
     // private bool bacteria = false;
+    ////  [SerializeField]
+    // // public bool bacteria { get; set; }
+    // // [SerializeField]
+    //  public bool phage1 { get; set; }
+    // // [SerializeField]
+    //  public bool phage2 { get; set; }
+    // // [SerializeField]
+    //  public bool shaken { get; set; }
+    ////  [SerializeField]
+    //  public bool incubated { get; set; }
+    // // [SerializeField]
+    //  public bool centrafuge { get; set; }
+
     [SerializeField]
-    public bool bacteria { get; set; }
+    private bool phage1 = false;
     [SerializeField]
-    public bool phage1 { get; set; }
+    private bool bacteria = false;
+
     [SerializeField]
-    public bool phage2 { get; set; }
+    private bool phage2 = false;
     [SerializeField]
-    public bool shaken { get; set; }
+    private bool shaken = false;
     [SerializeField]
-    public bool incubated { get; set; }
+    private bool incubated = false;
     [SerializeField]
-    public bool centrafuge { get; set; }
-
-
-
-
-
-    //private bool phage2 = false;
-
-    //private bool shaken = false;
-
-    // private bool incubated = false;
-
-    //private bool centrafuge = false; 
+    private bool centrafuge = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +45,7 @@ public class Liquid : World
     {
 
     }
-    /*public void setBacteria(bool value)
+    public void setBacteria(bool value)
     {
         bacteria = value;
     }
@@ -72,7 +74,7 @@ public class Liquid : World
         centrafuge = value;
     }
 
-    /*public bool getBacteria()
+    public bool getBacteria()
     {
         return bacteria;
     }
@@ -99,5 +101,5 @@ public class Liquid : World
     public bool getcentrafuge()
     {
         return centrafuge;
-    }*/
+    }
 }

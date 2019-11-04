@@ -82,8 +82,8 @@ public class Pipette : World
         liquid = previousHolder.transform.Find("liquid");
         liquid.transform.SetParent(parent.transform);
         Debug.Log("got into transferliquid");
-        parent.transform.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
-        previousHolder.transform.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", Color.grey);
+        //parent.transform.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
+        //previousHolder.transform.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", Color.grey);
     }
 
 

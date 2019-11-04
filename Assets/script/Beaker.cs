@@ -24,7 +24,7 @@ public class Beaker : LiquidContainer
             Transform child = this.transform.GetChild(0);
             if (child.transform.GetComponent<Liquid>() != null)
             {
-                child.transform.GetComponent<Liquid>().bacteria = true;
+                child.transform.GetComponent<Liquid>().setBacteria(true);
 
             }
         }
